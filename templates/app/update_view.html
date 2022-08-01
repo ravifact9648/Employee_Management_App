@@ -1,0 +1,62 @@
+{% extends 'app/base.html' %}
+
+{% block body_block %}
+    <h2 align="center">Update Employee Information....!!!</h2>
+    <hr>
+    <div class="i-am-centered" align="center">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                    <table  border="2">
+                    <tr>
+                        <td> <label >Name:</label></td>
+                        <td>{{ form.name }}</td> 
+                    </tr>
+                    <tr>
+                </div>
+                <tr>
+                <div class="form-group">
+                    <td><label>Email:</label></td>
+                    <td>{{ form.email }}</td>
+                </div>
+                </tr>
+            <tr>
+            <div class="form-group">
+                <td><label>Date of Birth:</label></td>
+                <td>{{ form.date_of_birth }}</td>
+            </div>
+             </tr>
+             <tr>
+                <div class="form-group">
+                    <td><label>Date of Join:</label></td>
+                    <td>{{ form.date_of_join }}</td>
+                </div>
+                 </tr>
+             <tr>
+                <div class="form-group">
+                   <td> <label>Gender:</label></td>
+                  <td> {{ form.gender }}</td>
+                </div> 
+                </tr>
+                <tr>
+                 <div class="form-group">
+                    <td><label>Designation:</label></td>
+                   <td>{{ form.designation }} </td>
+                </div>  
+                </tr>
+                <tr>
+                <div class="form-group">
+                    <td><label>Reporting Manager:</label></td>
+                  <td>  {{ form.reporting_manager }}</td>
+                </div>
+            </tr>
+            <br>
+        </table>
+        <br>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2"> Submit </button>
+          </div>
+        </form>
+    </table>
+    </div>
+{% endblock %}
